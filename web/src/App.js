@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginForm from './pages/LoginForm';
 import LandingPage from './pages/landingPage';
+import RacePage from './pages/racePage';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -36,6 +37,7 @@ function App() {
             )
           }
         />
+        <Route path="/pages/racePage/:raceName" element={<RacePage />} />
       </Routes>
     </Router>
   );
