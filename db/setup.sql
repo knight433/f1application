@@ -69,6 +69,19 @@ CREATE TABLE IF NOT EXISTS dev.user (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+--@block
+CREATE TABLE IF NOT EXISTS dev.races (
+    race_id INTEGER PRIMARY KEY,
+    race_name VARCHAR(128) NOT NULL,
+    circuit_id INTEGER NOT NULL,
+    season INTEGER NOT NULL,
+    date TIMESTAMP NOT NULL,
+    time VARCHAR(16) NOT NULL,
+    laps INTEGER NOT NULL,
+    winner_id INTEGER DEFAULT 0,
+    status VARCHAR(32) DEFAULT 'Scheduled'
+);
+
 
 INSERT INTO dev.races (
     race_id,

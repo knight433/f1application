@@ -11,6 +11,8 @@ import com.f1app.service.RacesService;
 import com.f1app.CrudOperationException;
 import com.f1app.CrudValidationException;
 import com.f1app.model.RacesModel;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @RestController
 @RequestMapping("/f1app/api/v1/races")
@@ -63,4 +65,5 @@ public class RacesController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+    
 }
